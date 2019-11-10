@@ -22,10 +22,22 @@ public class HelloController {
     @Autowired(required = false)
     UserService userService;
 
-    @GetMapping("hello")
+    @GetMapping("queryUsers")
     public @ResponseBody
     Result hello(){
 
         return userService.queryUserAll();
+    }
+
+    /**
+     * @Author liziyang
+     * @Description //hello.html页面跳转
+     * @Date 15:20 2019/11/10
+     * @Param []
+     * @return java.lang.String
+     **/
+    @GetMapping("hello")
+    public String toHello(){
+        return "hello";
     }
 }
