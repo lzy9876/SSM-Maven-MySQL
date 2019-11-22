@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.lzy.dao.CourierDao">
+
+<!-- 根据手机号查询用户信息 -->
+    <select id="queryUserByPhone" parameterType="String"
+                      resultType="cn.lzy.entity.User">
+      SELECT
+            id      ,
+            phone   ,
+            pass    ,
+            NAME    ,
+            salt    ,
+            register_data   ,
+            role    ,
+            COUNT   ,
+            sex
+        FROM USER a
+        WHERE a.phone = #{phone}
+    </select>
+
+<!-- 根据role字段查询用户信息列表-->
+    <select id="queryUserByRole" parameterType="String"
+            resultType="cn.lzy.entity.User">
+        SELECT
+            id      ,
+            phone   ,
+            pass    ,
+            name    ,
+            salt    ,
+            register_data   ,
+            role    ,
+            count   ,
+            sex
+        FROM user a
+        WHERE a.role = #{role}
+    </select>
+
+<!--  对应的插入字段的名字  -->
+    <sql id="key">
+        <trim suffixOverrides=",">
+            <if test="phone !=null and phone!=''">
+                phone,
+            </if>
+
+            <if test="name !=null and name!=''">
+                name,
+            </if>
+
+            <if test="pass !=null and pass!=''">
+                pass,
+            </if>
+
+            <if test="salt !=null and salt!=''">
+                salt,
+            </if>
+
+            <if test="register_data !=null and register_data!=''">
+                register_data,
+            </if>
+
+            <if test="id_card !=null and id_card!=''">
+                id_card,
+            </if>
+
+            <if test="role !=null and role!=''">
+                role,
+            </if>
+
+            <if test="count !=null and count!=''">
+                count,
+            </if>
+
+            <if test="sex !=null and sex!=''">
+                sex
+            </if>
+        </trim>
+    </sql>
+
+    <!--  对应的插入字段的名字  -->
+    <sql id="values">
+        <trim suffixOverrides=",">
+            <if test="phone !=null and phone!=''">
+                #{phone},
+            </if>
+
+            <if test="name !=null and name!=''">
+                #{name},
+            </if>
+
+            <if test="pass !=null and pass!=''">
+                #{pass},
+            </if>
+
+            <if test="salt !=null and salt!=''">
+                #{salt},
+            </if>
+
+            <if test="register_data !=null and register_data!=''">
+                #{register_data},
+            </if>
+
+            <if test="id_card !=null and id_card!=''">
+                #{id_card},
+            </if>
+
+            <if test="role !=null and role!=''">
+                #{role},
+            </if>
+
+            <if test="count !=null and count!=''">
+                #{count},
+            </if>
+
+            <if test="sex !=null and sex!=''">
+                #{sex}
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="saveUser" parameterType="java.util.Map">
+        insert into user(<include refid="key"/>)
+        values(<include refid="values"/>)
+    </insert>
+
+
+
+
+
+</mapper>

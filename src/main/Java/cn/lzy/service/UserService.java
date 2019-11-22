@@ -3,6 +3,8 @@ package cn.lzy.service;
 
 import cn.lzy.util.Result;
 
+import java.util.Map;
+
 /**
  * @Author liziyang
  * @Date 0:21 2019/11/7
@@ -11,5 +13,5 @@ import cn.lzy.util.Result;
 
 public interface UserService {
 
-    Result queryUserAll();
+
 }

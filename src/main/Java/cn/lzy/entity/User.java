@@ -2,6 +2,8 @@ package cn.lzy.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @ClassName User
  * @Author:Liziy
@@ -11,9 +13,34 @@ import lombok.Data;
 
 @Data
 public class User {
+    //ID
     private int id;
-    private String name;
+
+    //手机号
+    private String phone;
+
+    //密码
     private String pass;
-    private String nikName;
+
+    //姓名
+    private String name;
+
+    //盐 --加密
     private String salt;
+
+    //注册时间
+    //@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
+    private Date register_data;
+
+    //身份证
+    private String id_card;
+
+    //角色状态
+    private int role;
+
+    //派件数量
+    private int count;
+
+    //性别
+    private int sex;
 }
