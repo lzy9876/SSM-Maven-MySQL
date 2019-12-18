@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>测试页面</title>
+</head>
+<body>
+
+
+</body>
+<script src="../jquery.js"></script>
+<script>
+    $(function(){
+        var id=  getCookie("name_test");
+        alert(id+":id")
+    })
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+
+        if(arr=document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+</script>
+
+
+</html>

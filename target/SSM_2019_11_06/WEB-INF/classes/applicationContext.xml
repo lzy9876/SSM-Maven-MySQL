@@ -21,8 +21,50 @@
     <context:component-scan base-package="cn.lzy"></context:component-scan>
     <!--  开启标注形式的MVC -->
     <mvc:annotation-driven></mvc:annotation-driven>
-    <!-- 配置数据相关参数properties的属性：${url} -->
-    <context:property-placeholder location="classpath:jdbc.properties" />
+    <!-- 引入数据库配置文件 -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:redis.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- redis数据源 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="${redis.pool.maxIdle}" />
+        <property name="minIdle" value="${redis.pool.minIdle}" />
+        <property name="maxTotal" value="${redis.pool.maxTotal}" />
+        <property name="maxWaitMillis" value="${redis.pool.maxWaitMillis}" />
+        <property name="minEvictableIdleTimeMillis" value="${redis.pool.minEvictableIdleTimeMillis}"></property>
+        <property name="numTestsPerEvictionRun" value="${redis.pool.numTestsPerEvictionRun}"></property>
+        <property name="timeBetweenEvictionRunsMillis" value="${redis.pool.timeBetweenEvictionRunsMillis}"></property>
+        <property name="testOnBorrow" value="${redis.pool.testOnBorrow}" />
+        <property name="testOnReturn" value="${redis.pool.testOnReturn}" />
+        <property name="testWhileIdle" value="${redis.pool.testWhileIdle}"></property>
+    </bean>
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="poolConfig" ref="jedisPoolConfig" />
+        <property name="hostName" value="${redis.host}" />
+        <property name="port" value="${redis.port}" />
+        <property name="password" value="${redis.pwd}" />
+        <property name="usePool" value="${redis.userPool}" />
+        <property name="database" value="${redis.database}" />
+        <property name="timeout" value="${redis.timeout}" />
+    </bean>
+<!-- 配置redisTemplate -->
+   <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+       <property name="connectionFactory" ref="jedisConnectionFactory"/>
+       <property name="keySerializer">
+           <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+       </property>
+       <property name="valueSerializer">
+           <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+       </property>
+   </bean>
+
     <!--  MySQL连接池  -->
     <bean  id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass">
@@ -33,10 +75,22 @@
         <property name="password" value="${jdbc.password}"></property>
     </bean>
 
+
 <!-- 创建sqlSessionFactory -->
     <bean id="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource"  ref="dataSource"></property>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <!-- 配置mybatis分页插件PageHelper -->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <!-- 什么都不配，使用默认的配置 -->
+                        <value></value>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
 <!-- 批量产生Mapper实现类的组件 -->
     <bean  id="mapperScanner"  class="org.mybatis.spring.mapper.MapperScannerConfigurer">

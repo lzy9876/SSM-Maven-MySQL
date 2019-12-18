@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快件列表</title>
+
+    <style type="text/css">
+        body{
+            background-color: #f2f2f2;
+        }
+        .item{
+            margin: 20px;
+            margin-top: 0px;
+        }
+        .item_time{
+            font-size:10px;
+            color:#ccc;
+            text-align: center;
+        }
+        .item_content{
+            margin-top:10px;
+            background-color: #fff;
+            padding: 30px;
+        }
+        .item_content_title{
+            font-size:24px;
+        }
+        .item_content_time{
+            font-size:10px;
+            color:#ccc;
+        }
+        .item_content_text{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .item_content_bottom{
+            color:#33a;
+        }
+        h3{
+            padding-left: 20px;
+            margin-bottom: 10px;
+            font-size:40px;
+        }
+        h1{
+            font-size:80px;
+            color:#ccc;
+            text-align: center;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+<h1 id="noExpress">暂无快件</h1>
+
+<div id="expresslist">
+    <div id="qExpresss">
+        <h3>待取件</h3>
+
+
+
+    </div>
+    <div  id="yExpresss">
+        <h3>已取件</h3>
+
+
+
+    </div>
+</div>
+<br><br><br><br><br><br><br>
+
+</body>
+<script src="../login/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        //从cookie中获取userId
+        var userId = getCookie("userId");
+        //页面显示我的快件 未取件
+        elistByeStatus(userId)
+
+    })
+    function elistByeStatus(userId) {
+        $.ajax({
+            url:"/wxExpressList",
+            type:"post",
+            dataType:"json",
+            async:true,
+            data: {"userId":userId, "eStatus":1},
+            success:function(data){
+                if(data.code == 200){
+                    var expresslist = data.data;
+                   // alert("数组长度："+expresslist.length)
+                    if(expresslist.length > 0){
+                        $("#noExpress").hide();
+
+                        for(var i = 0; i < expresslist.length; i++){
+                            var str = '';
+                            var str2 = '';
+                            if(expresslist[i].eStatus == 1){
+                                str += '  <div class="item" >';
+                                str += ' <div class="item_time">'+expresslist[i].inTime+'</div>';
+                                str += '    <div class="item_content">'
+                                str += '       <div class="item_content_title">待取件通知</div>';
+                                str += '        <div class="item_content_time"></div>';
+                                str += '        <div class="item_content_text">';
+                                str += '           取件码:'+expresslist[i].code+'<br>';
+                                str += '           快递公司:'+expresslist[i].company+'<br>';
+                                str += '           运单号码:'+expresslist[i].eNum+'<br>';
+                                str += '           收件人姓名:'+expresslist[i].username+' ';
+                                str += '        </div>';
+                                str += '        <hr>';
+                                str += '<div class="item_content_bottom" onclick="personQRcode('+expresslist[i].code+')">取件二维码</div>';
+                                str +='</div>';
+                                str +='</div>';
+                            }else if(expresslist[i].eStatus == 2){
+                                str2 += '  <div class="item" >';
+                                str2+='<div class="item_time">'+expresslist[i].outTime+'</div>';
+                                str2+='<div class="item_content">';
+                                str2+='<div class="item_content_title">已取出</div>';
+                                str2+='<div class="item_content_time"></div>';
+                                str2+=' <div class="item_content_text">';
+                                str2+=' 到件时间:'+expresslist[i].inTime+'<br>';
+                                str2+=' 取出时间:'+expresslist[i].outTime+'<br>';
+                                str2+=' 快递公司:'+expresslist[i].company+'<br>';
+                                str2+='运单号码:'+expresslist[i].eNum+'<br>';
+                               // str2+=' 快递员手机:'+expresslist[i].phone+'';
+                                str2+=' </div>';
+                                str2+=' <hr>';
+                                str2+='<div class="item_content_bottom">';
+                                str2+=' 欢迎再次使用';
+                                str2+=' </div>';
+                                str2+='</div>';
+                                str2 +='</div>';
+                            }
+
+                        $("#qExpresss").append(str);
+                        $("#yExpresss").append(str2);
+
+                        }
+
+                    }else{
+                        $("#expresslist").hide();
+                    }
+
+
+                }
+            },
+            error:function (data) {
+                layer.msg("error");
+            }
+
+        })
+    }
+
+    function personQRcode(code) {
+        window.location.href="/personQRcode?code="+code;
+
+    }
+
+    function getCookie(name) {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+</script>
+</html>

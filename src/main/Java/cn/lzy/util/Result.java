@@ -21,5 +21,16 @@ public class Result {
     //返回数据
     private Object data;
 
+    //数据条数
+    private long count;
 
+    public Result() {
+    }
+
+    public Result(int code, String msg, Object data, long count) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+        this.count = count;
+    }
 }

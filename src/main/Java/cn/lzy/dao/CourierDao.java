@@ -39,4 +39,43 @@ public interface CourierDao {
      * @return java.util.List<cn.lzy.entity.User>
      **/
     List<User> queryUserByRole(int role);
+
+    /**
+     * @Author liziyang
+     * @Description 根据id查询用户信息
+     * @Date 17:22 2019/11/25
+     * @Param [id]
+     * @return cn.lzy.entity.User
+     **/
+    User queryUserById(Integer id);
+
+    /**
+     * @Author liziyang
+     * @Description 用户信息更新
+     * @Date 16:10 2019/11/28
+     * @Param [map]
+     * @return int
+     **/
+    int updateCourierById(Map map);
+
+    /**
+     * @Author liziyang
+     * @Description 用户信息删除
+     * @Date 17:19 2019/11/28
+     * @Param [map]
+     * @return int
+     **/
+    int deleteCourierById(Map map);
+
+   /**
+    * @Author liziyang
+    * @Description //TODO
+    * @Date 16:22 2019/12/17
+    * @Param [map] 参数列表
+    *（role）用户角色              role： 1-管理员 2-普通用户
+    *（register_data）注册时间     toDate -- doDate
+    * @return int 查询到的数据数量
+    **/
+    int queryUserCount(Map map);
+
 }

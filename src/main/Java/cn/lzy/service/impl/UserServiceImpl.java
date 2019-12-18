@@ -1,5 +1,6 @@
 package cn.lzy.service.impl;
 
+import cn.lzy.dao.CourierDao;
 import cn.lzy.dao.UserDao;
 import cn.lzy.entity.User;
 import cn.lzy.service.UserService;
@@ -18,11 +19,5 @@ import java.util.List;
  **/
 @Service
 public class UserServiceImpl implements UserService {
-
-
-
-    @Autowired
-    UserDao userDao;
-
 
 }

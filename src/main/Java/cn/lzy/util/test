@@ -1,0 +1,20 @@
+
+//快递员列表
+@GetMapping("views/courier/courierlist/{role}")
+    public String toCourierlist(Model model,@PathVariable Integer role){
+        Result result = new Result();
+        //role数值异常
+        if(role == null ){
+            result.setCode(Constant.ERROR1);
+            result.setMsg(Constant.DATA_ERROR_MSG);
+            model.addAttribute("code",Constant.ERROR1);
+            model.addAttribute("msg",Constant.DATA_ERROR_MSG);
+            return  "views/courier/courierlist";
+        }
+        result = courierService.queryUserByRole(role);
+        model.addAttribute("code",result.getCode());
+        model.addAttribute("msg",result.getMsg());
+        model.addAttribute("data",result.getData());
+        return  "views/courier/courierlist";
+
+    }

@@ -2,7 +2,6 @@ package cn.lzy.entity;
 
 import lombok.Data;
 
-import java.util.Date;
 
 /**
  * @ClassName User
@@ -29,8 +28,8 @@ public class User {
     private String salt;
 
     //注册时间
-    //@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
-    private Date register_data;
+
+    private String register_data;
 
     //身份证
     private String id_card;

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.lzy.dao.ExpressDao">
+
+
+<!--  对应的插入字段的名字  -->
+    <sql id="key">
+        <trim suffixOverrides=",">
+            <if test="eNum !=null and eNum!=''">
+                eNum,
+            </if>
+
+            <if test="company !=null and company!=''">
+                company,
+            </if>
+
+            <if test="uPhone !=null and uPhone!=''">
+                uPhone,
+            </if>
+
+            <if test="username !=null and username!=''">
+                username,
+            </if>
+
+            <if test="inTime !=null and inTime!=''">
+                inTime,
+            </if>
+
+            <if test="eStatus !=null and eStatus!=''">
+                eStatus,
+            </if>
+
+            <if test="outTime !=null and outTime!=''">
+                outTime,
+            </if>
+
+            <if test="cPhone !=null and cPhone!=''">
+                cPhone,
+            </if>
+
+            <if test="code !=null and code!=''">
+                code
+            </if>
+        </trim>
+    </sql>
+
+    <!--  对应的插入字段的名字  -->
+    <sql id="values">
+        <trim suffixOverrides=",">
+            <if test="eNum !=null and eNum!=''">
+                #{eNum},
+            </if>
+
+            <if test="company !=null and company!=''">
+                #{company},
+            </if>
+
+            <if test="uPhone !=null and uPhone!=''">
+                #{uPhone},
+            </if>
+
+            <if test="username !=null and username!=''">
+                #{username},
+            </if>
+
+            <if test="inTime !=null and inTime!=''">
+                #{inTime},
+            </if>
+
+            <if test="eStatus !=null and eStatus!=''">
+                #{eStatus},
+            </if>
+
+            <if test="outTime !=null and outTime!=''">
+                #{outTime},
+            </if>
+
+            <if test="cPhone !=null and cPhone!=''">
+                #{cPhone},
+            </if>
+
+            <if test="code !=null and code!=''">
+                #{code}
+            </if>
+        </trim>
+    </sql>
+
+    <!-- 快件增加   -->
+    <insert id="saveExpress" parameterType="java.util.Map">
+        insert into WEB_EXPRESS(<include refid="key"/>)
+        values(<include refid="values"/>)
+    </insert>
+
+    <!-- 根据取件码查询快递信息 -->
+    <select id="queryExpressByCodeORuPhone" parameterType="java.util.Map"
+            resultType="cn.lzy.entity.Express">
+        SELECT
+            ID      ,
+            ENUM    ,
+            COMPANY ,
+            UPHONE  ,
+            USERNAME,
+            INTIME  ,
+            ESTATUS ,
+            OUTTIME ,
+            CPHONE  ,
+            CODE
+        FROM WEB_EXPRESS
+        WHERE CODE=#{code} OR UPHONE=#{uPhone}
+    </select>
+
+    <!-- 根据所有快件信息  -->
+    <select id="queryExpress"
+            resultType="cn.lzy.entity.Express">
+        SELECT
+            ID      ,
+            ENUM    ,
+            COMPANY ,
+            UPHONE  ,
+            USERNAME,
+            INTIME  ,
+            ESTATUS ,
+            OUTTIME ,
+            CPHONE  ,
+            CODE
+        FROM WEB_EXPRESS
+        order by INTIME desc
+    </select>
+
+    <!-- 根据estatus查询快件信息  -->
+    <select id="queryExpressByeStatus" parameterType="Integer"
+            resultType="cn.lzy.entity.Express">
+        SELECT
+            ID      ,
+            ENUM    ,
+            COMPANY ,
+            UPHONE  ,
+            USERNAME,
+            INTIME  ,
+            ESTATUS ,
+            OUTTIME ,
+            CPHONE  ,
+            CODE
+        FROM WEB_EXPRESS
+        WHERE ESTATUS= #{eStatus} order by INTIME desc
+    </select>
+
+    <!-- 根据用户手机号 查询快件信息   -->
+    <select id="queryExpressByuPhone" parameterType="Map"
+            resultType="cn.lzy.entity.Express">
+        SELECT
+            ID      ,
+            ENUM    ,
+            COMPANY ,
+            UPHONE  ,
+            USERNAME,
+            INTIME  ,
+            ESTATUS ,
+            OUTTIME ,
+            CPHONE  ,
+            CODE
+        FROM WEB_EXPRESS
+        WHERE UPHONE = #{uPhone} order by INTIME desc
+    </select>
+
+    <!-- 根据id查询快件信息  -->
+    <select id="queryExpressById" parameterType="Integer"
+            resultType="cn.lzy.entity.Express">
+        SELECT
+            ID      ,
+            ENUM    ,
+            COMPANY ,
+            UPHONE  ,
+            USERNAME,
+            INTIME  ,
+            ESTATUS ,
+            OUTTIME ,
+            CPHONE  ,
+            CODE
+        FROM WEB_EXPRESS
+        WHERE ID= #{id}
+    </select>
+
+
+    <!-- user信息更新   -->
+    <update id="updateExpressById" parameterType="java.util.Map">
+        update WEB_EXPRESS
+        <trim prefix="set" suffixOverrides=",">
+            <if test="eNum !=null and eNum!=''">
+                ENUM = #{eNum},
+            </if>
+
+            <if test="company !=null and company!=''">
+                COMPANY = #{company},
+            </if>
+
+            <if test="uPhone !=null and uPhone!=''">
+                UPHONE = #{uPhone},
+            </if>
+
+            <if test="username != null and username!=''">
+                USERNAME = #{username},
+            </if>
+
+            <if test="inTime != null and inTime!=''">
+                INTIME = #{inTime},
+            </if>
+
+            <if test="eStatus != null and eStatus!=''">
+                ESTATUS = #{eStatus},
+            </if>
+
+            <if test="outTime != null and outTime!=''">
+                OUTTIME = #{outTime},
+            </if>
+
+            <if test="cPhone != null and cPhone!=''">
+                CPHONE = #{cPhone},
+            </if>
+
+            <if test="code != null and code!=''">
+                CODE = #{code},
+            </if>
+        </trim>
+        where ID = #{id}
+    </update>
+
+    <!--    快件删除   -->
+    <delete id="deleteExpressById" parameterType="Integer">
+        DELETE w
+        FROM WEB_EXPRESS w
+        where w.ID = #{id}
+    </delete>
+
+    <update id="updateExpressCodeById" parameterType="Map">
+        UPDATE WEB_EXPRESS
+        SET CODE = NULL,ESTATUS = 2,OUTTIME = #{outTime}
+        WHERE ID = #{id}
+    </update>
+
+<!--  查询快件数量  -->
+    <select id="queryExpressCount" parameterType="Integer" resultType="Integer">
+       SELECT
+        COUNT(ID)
+       FROM WEB_EXPRESS
+        <if test="eStatus != null and eStatus!=''">
+            WHERE  ESTATUS = #{eStatus}
+        </if>
+
+        <if test="toDate != null and toDate!='' and doDate != null and doDate!=''">
+            AND inTime BETWEEN #{toDate} AND #{doDate}
+        </if>
+
+    </select>
+
+
+
+
+
+
+
+
+
+
+</mapper>

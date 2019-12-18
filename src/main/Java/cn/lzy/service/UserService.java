@@ -1,8 +1,10 @@
 package cn.lzy.service;
 
 
+import cn.lzy.entity.User;
 import cn.lzy.util.Result;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -12,6 +14,7 @@ import java.util.Map;
  **/
 
 public interface UserService {
+
 
 
 }

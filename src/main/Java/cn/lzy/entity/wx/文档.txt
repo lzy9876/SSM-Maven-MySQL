@@ -1,0 +1,16 @@
+务必修改
+	1.	cn.xdl.wx.util.SignatureUtil类 88 行的appid  否则无法调用api
+	2.	cn.xdl.wx.util.TokenUtil类的34行的appid
+	3.	cn.xdl.wx.util.TokenUtil类的35行的secret
+
+appid和密钥来自于:
+	mp.weixin.qq.com --> 开发者设置
+
+添加JS安全域名:
+	(因为映射服务器网址被举报, 需要设置自己的域名.)
+	公众号设置-->功能设置
+
+添加白名单ip:
+	1.	映射服务器地址
+	2.	本机ip地址
+	
