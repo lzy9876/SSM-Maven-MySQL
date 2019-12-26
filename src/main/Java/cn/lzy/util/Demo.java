@@ -25,21 +25,21 @@ public class Demo {
 //        String age = (String) redisTemplate.boundValueOps("age").get();
 //        System.out.println(age);
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        //获取当前时间
-        //String time = dateFormat.format( now );
-
-
-        String time = DateUtil.getTime();
-        String substring = time.substring(0, 10);
-        System.out.println(substring+" :substring");
-        System.out.println(time);
-        String  time1 = " 00:00:00";
-        String  time2 = " 23:59:59";
-        System.out.println(substring+time1);
-        String[] split = time.split("2");
-
-        String a = ",";
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        //获取当前时间
+//        //String time = dateFormat.format( now );
+//
+//
+//        String time = DateUtil.getTime();
+//        String substring = time.substring(0, 10);
+//        System.out.println(substring+" :substring");
+//        System.out.println(time);
+//        String  time1 = " 00:00:00";
+//        String  time2 = " 23:59:59";
+//        System.out.println(substring+time1);
+//        String[] split = time.split("2");
+//
+//        String a = ",";
 
 
 

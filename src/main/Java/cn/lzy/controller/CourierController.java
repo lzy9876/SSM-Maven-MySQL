@@ -44,6 +44,18 @@ public class CourierController {
 
     }
 
+    /**
+     * @Author liziyang
+     * @Description 根据用户id 查询用户信息
+     * @Date 16:08 2019/12/26
+     * @Param [userId]
+     * @return cn.lzy.util.Result
+     **/
+    @PostMapping("queryUserById")
+    public @ResponseBody Result queryUserById(Integer userId){
+        return courierService.queryUserById(userId);
+    }
+
 
     /**
      * @Author liziyang

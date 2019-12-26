@@ -55,4 +55,7 @@ public class Constant {
     public static final String QEXPRESS_SUCCESS_MAG = "取件成功";
     public static final String QEXPRESS_ERROR_MAG = "取件失败";
 
+    public static final String LOGIN_USER_STATUS = "用户登录信息失效";
+
+
 }

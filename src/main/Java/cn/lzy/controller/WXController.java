@@ -6,6 +6,7 @@ import cn.lzy.service.CourierService;
 import cn.lzy.service.ExpressService;
 import cn.lzy.util.Constant;
 import cn.lzy.util.DateUtil;
+import cn.lzy.util.DeleteCookie;
 import cn.lzy.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
@@ -46,6 +48,13 @@ public class WXController {
 
     @GetMapping("wxLogin")
     public String toWxLogin(){
+        return "wx/login";
+    }
+
+
+    @GetMapping("userQuitLogin")
+    public String  adminQuit(HttpServletResponse response, HttpServletRequest request){
+        DeleteCookie.delete(response,"userId");
         return "wx/login";
     }
 
@@ -115,8 +124,9 @@ public class WXController {
         Result result = new Result();
         //参数数据异常
         if(userId == null || userId == ""){
-            result.setCode(Constant.ERROR1);
-            result.setMsg(Constant.DATA_ERROR_MSG);
+            result.setCode(Constant.ERROR2);
+            //用户登录信息失效
+            result.setMsg(Constant.LOGIN_USER_STATUS);
             return  result;
         }
         Map map = new HashMap();
@@ -189,7 +199,6 @@ public class WXController {
             map.put("id",express.getId());
         }
         String time = DateUtil.getTime();
-        System.out.println(time);
         map.put("outTime",time );
         return expressService.updateExpressCodeById(map);
     }

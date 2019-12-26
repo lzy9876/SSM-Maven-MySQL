@@ -5,6 +5,7 @@ import cn.lzy.service.CourierService;
 import cn.lzy.service.ExpressService;
 import cn.lzy.util.Constant;
 import cn.lzy.util.DateUtil;
+import cn.lzy.util.DeleteCookie;
 import cn.lzy.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import cn.lzy.entity.User;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.Console;
 import java.util.HashMap;
@@ -57,6 +59,21 @@ public class IndexController {
         return "login";
     }
 
+
+    /**
+     * @Author liziyang
+     * @Description 退出登录 userId 设置为 空
+     * @Date 16:00 2019/12/26
+     * @Param [response]
+     * @return java.lang.String
+     **/
+    @GetMapping("quitLogin")
+    public String  adminQuit(HttpServletResponse response, HttpServletRequest request){
+        DeleteCookie.delete(response,"userId");
+        return "login";
+    }
+
+
     /**
      * @Author liziyang
      * @Description  管理员登录控制器
@@ -86,11 +103,17 @@ public class IndexController {
             return result;
         }
         Integer userId = user.getId();
+        Integer role = user.getRole();
         //保存管理员登录的信息
         Cookie cookie = new Cookie("userId",userId.toString());//创建新cookie
         cookie.setMaxAge(30*24*60*60);// 设置存在时间为30天
         cookie.setPath("/");//设置作用域
         response.addCookie(cookie);//将cookie添加到response的cookie数组中返回给客户端
+
+        Cookie cookie1 = new Cookie("role",role.toString());//创建新cookie
+        cookie1.setMaxAge(30*24*60*60);// 设置存在时间为30天
+        cookie1.setPath("/");//设置作用域
+        response.addCookie(cookie1);//将cookie添加到response的cookie数组中返回给客户端
 
         return  result;
     }

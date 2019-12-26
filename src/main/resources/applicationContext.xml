@@ -113,6 +113,9 @@
     <tx:annotation-driven  transaction-manager="transactionManager"
                            proxy-target-class="true" />
 
+<!--  开启标注形式的 aop  -->
+<!--    <aop:aspectj-autoproxy proxy-target-class="true" />-->
+
 <!--  放行静态资源 -->
     <mvc:default-servlet-handler/>
 

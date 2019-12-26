@@ -74,6 +74,9 @@
     $(function () {
         //从cookie中获取userId
         var userId = getCookie("userId");
+       if(userId == null || userId == ""){
+           window.location.href="/wxLogin";
+       }
         //页面显示我的快件 未取件
         elistByeStatus(userId)
 
@@ -87,6 +90,7 @@
             data: {"userId":userId, "eStatus":1},
             success:function(data){
                 if(data.code == 200){
+                    alert(200)
                     var expresslist = data.data;
                    // alert("数组长度："+expresslist.length)
                     if(expresslist.length > 0){
@@ -137,7 +141,7 @@
 
                         }
 
-                    }else{
+                    }else {
                         $("#expresslist").hide();
                     }
 
@@ -163,6 +167,7 @@
         else
             return null;
     }
+
 
 </script>
 </html>

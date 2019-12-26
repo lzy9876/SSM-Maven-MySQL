@@ -38,11 +38,11 @@
 				</div>
 				<div class="userFun">
 					<p class="funIcon userFunColor3"></p>
-					<p class="funTxt">我的快递</p>
+					<p class="funTxt">我的快件</p>
 				</div>
 				<div class="userFun">
 					<p class="funIcon userFunColor4"></p>
-					<p class="funTxt">敬请期待</p>
+					<p class="funTxt">退出登录</p>
 				</div>
 				<div class="userFun" id="adminSet">
 					<p class="funIcon userFunColor5"></p>
@@ -53,9 +53,14 @@
 
 	</div>
 	<script type="text/javascript">
+
 	$(function(){
 		var id = getCookie("userId");
 		var role = getCookie("role");
+		if(id == null || id == ""){
+			window.location.href="/wxLogin";
+		}
+
 		if(role == 2){
 			$("#adminSet").hide();
 
@@ -78,7 +83,8 @@
 				case(2):
 					window.location.href= "/wx/elist";
 					break;
-				case(3): rzAlert("温馨提示","新功能正在开发中，敬请期待！"); break;
+				case(3): window.location.href= "/userQuitLogin";
+					break;
 				case(4): window.location.href= "/expressAssist"; break;
 			}
 		});
@@ -153,6 +159,7 @@
 		else
 			return null;
 	}
+
 	</script>
 </body>
 </html>
