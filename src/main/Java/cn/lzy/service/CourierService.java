@@ -90,4 +90,6 @@ public interface CourierService {
      **/
     Result queryUserCount(Map map);
 
+    Result queryUserByPhoneAndRole(int page, int limit, String Phone,int role);
+
 }

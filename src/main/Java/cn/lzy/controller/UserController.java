@@ -45,9 +45,8 @@ public class UserController {
      * @return cn.lzy.util.Result
      **/
     @GetMapping("/userlistByRole")
-    public @ResponseBody
-    Result userlist(int page, int limit){
-        return courierService.queryUserByRole(2, page, limit);
+    public @ResponseBody Result userlist(int page, int limit, String phone){
+        return courierService.queryUserByPhoneAndRole(page,limit,phone,2);
     }
 
     /**

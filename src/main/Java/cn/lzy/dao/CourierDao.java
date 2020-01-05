@@ -78,4 +78,13 @@ public interface CourierDao {
     **/
     int queryUserCount(Map map);
 
+    /**
+     * @Author liziyang
+     * @Description 查询用户信息 手机号 role
+     * @Date 17:58 2020/1/5
+     * @Param [map]
+     * @return java.util.List<cn.lzy.entity.User>
+     **/
+    List<User> queryUserByPhoneAndRole(Map map);
+
 }

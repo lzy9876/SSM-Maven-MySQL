@@ -59,6 +59,7 @@
 
 
     </div>
+
     <div  id="yExpresss">
         <h3>已取件</h3>
 
@@ -90,7 +91,6 @@
             data: {"userId":userId, "eStatus":1},
             success:function(data){
                 if(data.code == 200){
-                    alert(200)
                     var expresslist = data.data;
                    // alert("数组长度："+expresslist.length)
                     if(expresslist.length > 0){

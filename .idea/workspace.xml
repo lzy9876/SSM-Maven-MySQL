@@ -7,34 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="843c0431-12a6-4002-ae65-a7d6402f64f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/util/DeleteCookie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/util/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/courier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/ExpressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/ExpressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/dao/CourierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/dao/CourierDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/ExpressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/ExpressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/ExpressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/ExpressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/courierlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/courierlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/expresslist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/expresslist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/controller/CourierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/controller/CourierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/controller/WXController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/controller/WXController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/util/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/util/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/util/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/classes/cn/lzy/util/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/wx/elist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/wx/elist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/wx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM_2019_11_06/WEB-INF/wx/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/lzy/controller/CourierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/lzy/controller/CourierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/lzy/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/lzy/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/lzy/controller/WXController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/lzy/controller/WXController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/lzy/util/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/lzy/util/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/lzy/util/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/lzy/util/Demo.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,10 +50,94 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="115" column="40" lean-forward="true" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+            <state relative-caret-position="52">
+              <caret line="135" column="77" selection-start-line="135" selection-start-column="72" selection-end-line="135" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpressMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="253" column="15" selection-start-line="253" selection-start-column="12" selection-end-line="253" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userlist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1102">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="e#375#381#0" expanded="true" />
+                <element signature="e#381#387#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/courierlist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+              <folding>
+                <element signature="e#377#383#0" expanded="true" />
+                <element signature="e#383#389#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/expresslist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="e#394#400#0" expanded="true" />
+                <element signature="e#400#406#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="203" column="21" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,96 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/addcourier.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1188#1189#0" expanded="true" />
-                <element signature="e#1221#1222#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/DeleteCookie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/DateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-              <folding>
-                <element signature="e#3685#3686#0" expanded="true" />
-                <element signature="e#3713#3714#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -195,9 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/wx/TokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/wx/文档.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/login.html" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/wx/TicketUtil.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/updatecourier.html" />
@@ -206,8 +188,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/pickExpress.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/expressAssist.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/personQRcode.html" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/ExpressController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/expresslist.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/RootConfig.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/CacheUtil.java" />
@@ -220,32 +200,37 @@
         <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Result.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/dao/ExpressDao.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/dao/CourierDao.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/ExpressService.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/ExpressServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/DataUtil.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/wx/ConsoleData.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/ConsoleData.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ExpressMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/console.html" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/DateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Demo02.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Demo.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/entity/courier.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/util/DeleteCookie.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXController.java" />
         <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/index.html" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/ExpressServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/ExpressController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/expresslist.html" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/dao/CourierDao.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/ExpressService.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/cn/lzy/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userlist.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/courierlist.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml" />
       </list>
     </option>
   </component>
@@ -273,6 +258,11 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="SSM_2019_11_06 Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="SSM_2019_11_06 Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
@@ -290,7 +280,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,15 +355,6 @@
               <item name="SSM_2019_11_06" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzy" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSM_2019_11_06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSM_2019_11_06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -415,7 +396,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="wx" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="courier" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM_2019_11_06" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM_2019_11_06" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="express" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM_2019_11_06" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM_2019_11_06" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SSM_2019_11_06" type="b2602c69:ProjectViewProjectNode" />
@@ -426,7 +428,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -675,7 +677,10 @@
       <workItem from="1576305942663" duration="9533000" />
       <workItem from="1576396961566" duration="24689000" />
       <workItem from="1576989435125" duration="2313000" />
-      <workItem from="1577278855634" duration="19448000" />
+      <workItem from="1577278855634" duration="20963000" />
+      <workItem from="1577366787527" duration="1453000" />
+      <workItem from="1578207497533" duration="776000" />
+      <workItem from="1578208852890" duration="10684000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次上传">
       <created>1573369453422</created>
@@ -719,11 +724,18 @@
       <option name="project" value="LOCAL" />
       <updated>1576657635102</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="12-26 登录拦截 退出登录功能完成">
+      <created>1577356371940</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577356371940</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334870000" />
+    <option name="totallyTimeSpent" value="349298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -735,10 +747,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34039333" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -749,8 +760,8 @@
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32935154" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.47440273" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.051194537" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" visible="true" weight="0.054607507" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.19453925" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" visible="true" weight="0.49146757" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.5341297" />
@@ -773,7 +784,7 @@
       <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34039333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34568834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -784,8 +795,8 @@
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32935154" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.47440273" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.051194537" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" visible="true" weight="0.2320819" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.19453925" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.054607507" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.5341297" />
@@ -818,24 +829,10 @@
     <MESSAGE value="BGK~UTF-8" />
     <MESSAGE value="快递员增加功能" />
     <MESSAGE value="12-18 功能更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="12-18 功能更新" />
+    <MESSAGE value="12-26 登录拦截 退出登录功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="12-26 登录拦截 退出登录功能完成" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/RedisCacheTransfer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-redis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="30" column="86" selection-start-line="30" selection-start-column="86" selection-end-line="30" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/RedisCache.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/RootConfig.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -849,40 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/dao/ExpressDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/ExpressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/entity/Express.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="199" column="71" selection-start-line="199" selection-start-column="71" selection-end-line="199" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -935,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpressMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="244" column="78" selection-start-line="244" selection-start-column="71" selection-end-line="244" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/jdk1.8.0_162/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -970,44 +926,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/ExpressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="72" column="46" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXConfigController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/ExpressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1414">
-          <caret line="81" column="23" lean-forward="true" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,13 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -1100,36 +1015,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/form.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/dao/CourierDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="120" column="22" lean-forward="true" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/console.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1178">
@@ -1147,23 +1032,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/entity/courier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="2185">
+          <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="103" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3230">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/addcourier.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="63" column="48" lean-forward="true" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="48" />
+        <state relative-caret-position="1197">
+          <caret line="63" column="48" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/DeleteCookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="456">
           <caret line="26" column="16" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1173,69 +1092,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/util/DeleteCookie.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="1007">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/entity/Express.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/dao/ExpressDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="70" column="38" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/WXController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/ExpressController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        <state relative-caret-position="511">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/dao/CourierDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/ExpressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/ExpressServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="209" column="111" lean-forward="true" selection-start-line="203" selection-start-column="8" selection-end-line="209" selection-end-column="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/entity/courier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/impl/CourierServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="203" column="21" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/expresslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#394#400#0" expanded="true" />
+            <element signature="e#400#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courier/courierlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+          <folding>
+            <element signature="e#377#383#0" expanded="true" />
+            <element signature="e#383#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1102">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#375#381#0" expanded="true" />
+            <element signature="e#381#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/service/CourierService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/CourierController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        <state relative-caret-position="52">
+          <caret line="135" column="77" selection-start-line="135" selection-start-column="72" selection-end-line="135" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpressMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-          <folding>
-            <element signature="e#3685#3686#0" expanded="true" />
-            <element signature="e#3713#3714#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="372">
+          <caret line="253" column="15" selection-start-line="253" selection-start-column="12" selection-end-line="253" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CourierMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="115" column="40" lean-forward="true" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+        <state relative-caret-position="60">
+          <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/elist.html">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/cn/lzy/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/wx/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        <state relative-caret-position="149">
+          <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
         </state>
       </provider>
     </entry>

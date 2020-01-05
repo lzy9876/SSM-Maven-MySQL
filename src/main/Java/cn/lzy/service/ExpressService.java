@@ -82,7 +82,9 @@ public interface ExpressService {
      * @Author liziyang
      * @Description 查询所有快件信息
      * @Date 21:53 2019/12/9
-     * @Param []
+     * @Param [ int page,
+     *          int limit,
+     *
      * @return cn.lzy.util.Result
      **/
     Result queryExpress(int page, int limit);
@@ -97,5 +99,18 @@ public interface ExpressService {
      * @return cn.lzy.util.Result
      **/
     Result queryExpressCount(Map map);
+
+    /**
+     * @Author liziyang
+     * @Description 根据用户手机号查询所有快件信息
+     * @Date 16:09 2020/1/5
+     * @Param [ int page,
+     *          int limit,
+     *          Integer uPhone]
+     * @return cn.lzy.util.Result
+     **/
+    Result queryExpressByuPhoneLoss(int page, int limit, String uPhone);
+
+
 
 }

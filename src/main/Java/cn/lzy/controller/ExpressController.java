@@ -57,9 +57,14 @@ public class ExpressController {
     }
 
     @GetMapping("/expressslist")
-    public @ResponseBody Result expressList(int page, int limit){
-        return expressService.queryExpress(page,limit);
+    public @ResponseBody Result expressList(int page, int limit,String uPhone){
+        if(uPhone == null || uPhone == ""){
+            return expressService.queryExpress(page,limit);
+        }
+        return expressService.queryExpressByuPhoneLoss(page,limit,uPhone);
     }
+
+
 
     /**
      * @Author liziyang

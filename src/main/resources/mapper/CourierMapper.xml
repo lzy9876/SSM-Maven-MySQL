@@ -58,6 +58,31 @@
         WHERE a.role = #{role}
     </select>
 
+<!-- 根据手机号和role查询用户信息 -->
+    <select id="queryUserByPhoneAndRole" parameterType="Map"
+            resultType="cn.lzy.entity.User">
+      SELECT
+            id      ,
+            phone   ,
+            pass    ,
+            NAME    ,
+            salt    ,
+            register_data   ,
+            id_card         ,
+            role    ,
+            COUNT   ,
+            sex
+        FROM user a
+        <if test="role != null and role!=''">
+            WHERE  role = #{role}
+        </if>
+
+        <if test="phone != null and phone!=''">
+            AND a.phone = #{phone}
+        </if>
+
+    </select>
+
 <!--  对应的插入字段的名字  -->
     <sql id="key">
         <trim suffixOverrides=",">

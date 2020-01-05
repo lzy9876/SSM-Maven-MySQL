@@ -195,5 +195,20 @@ public class ExpressServiceImpl implements ExpressService {
         return new Result(Constant.SUCCESS,Constant.SUCCESS_SUCCESS_MSG,i,0);
     }
 
+    @Override
+    public Result queryExpressByuPhoneLoss(int page, int limit, String uPhone) {
+        Map map = new HashMap();
+        map.put("uPhone",uPhone);
+        PageHelper.startPage(page,limit);
+        List<Express> expressList = expressDao.queryExpressByuPhone(map);
+        if(expressList.size() == 0){
+            return new Result(Constant.ERROR1,Constant.QUERY_DATA_NULL_MSG,null,0);
+        }
+
+        PageInfo<Express> pageInfo= new PageInfo<>(expressList);
+        //传入 expressList 和 pageInfo.getTotal()总数据条数
+        return new Result(Constant.LAYUI_SUCCESS,Constant.SUCCESS_SUCCESS_MSG,expressList,pageInfo.getTotal());
+    }
+
 
 }

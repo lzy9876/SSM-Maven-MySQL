@@ -9,6 +9,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +37,7 @@ public class CourierServiceImpl implements CourierService {
         result.setData(Constant.SUCCESS);
         result.setMsg(Constant.SUCCESS_SUCCESS_MSG);
         result.setData(user);
-        return null;
+        return result;
     }
 
     /**
@@ -187,6 +188,22 @@ public class CourierServiceImpl implements CourierService {
     public Result queryUserCount(Map map) {
         int i = courierDao.queryUserCount(map);
         return new Result(Constant.SUCCESS,Constant.SUCCESS_SUCCESS_MSG,i,0);
+    }
+
+    @Override
+    public Result queryUserByPhoneAndRole(int page, int limit, String Phone,int role) {
+        Map map = new HashMap();
+        map.put("phone",Phone);
+        map.put("role",role);
+        List<User> userList = courierDao.queryUserByPhoneAndRole(map);
+        if(userList.size() == 0){
+            return new Result(Constant.ERROR1,Constant.QUERY_DATA_NULL_MSG,null,0);
+        }
+
+        PageInfo<User> pageInfo= new PageInfo<>(userList);
+        //传入 userList 和 pageInfo.getTotal()总数据条数
+        return new Result(Constant.LAYUI_SUCCESS,Constant.SUCCESS_SUCCESS_MSG,userList,pageInfo.getTotal());
+
     }
 
 }

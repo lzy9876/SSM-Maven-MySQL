@@ -133,8 +133,8 @@ public class CourierController {
      * @return cn.lzy.util.Result
      **/
     @GetMapping("/courierlistByRole")
-    public @ResponseBody Result courierlist(int page, int limit){
-        return courierService.queryUserByRole(1, page, limit);
+    public @ResponseBody Result courierlist(int page, int limit, String phone){
+        return courierService.queryUserByPhoneAndRole(page,limit,phone,1);
     }
 
     @GetMapping("views/courier/updatecourier/{id}")
