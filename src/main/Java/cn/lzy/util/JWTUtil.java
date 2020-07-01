@@ -35,7 +35,7 @@ public class JWTUtil {
 	        // 返回token字符串
 	        return JWT.create()
 	                .withHeader(header)
-	                .withClaim("aud", user.getName())
+	                .withClaim("aud", user.getPhone())
 	                .withClaim("uid", user.getId())
 	                .withExpiresAt(date)
 	                .sign(algorithm);
@@ -64,7 +64,6 @@ public class JWTUtil {
 	/**
 	   *      从token解析出uid信息
 	 * @param token
-	 * @param key
 	 * @return
 	 */
 	public static int parseTokenUid(String token) {
@@ -73,7 +72,9 @@ public class JWTUtil {
 	}
 	
 	public static void main(String[] args) {
-		String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJqYXZhMjkiLCJ1aWQiOjM4LCJleHAiOjE1NjExMTQ0OTd9.hlfBi5dazoOHmkYPy9ZlEGLAGhrLd4KtRvd77U4A0hc";
+		String token = "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhZG1pbiIsInVpZCI6MTAwNSwiZXhwIjoxNTkxNDg4OTg3fQ.mWcGb5vrLy2GRXhf8uYlmknFYuiTK77i8eSv5Ui4pnw";
+		boolean a = verify(token);
+		System.out.println(a);
 		int  s = parseTokenUid(token);
 		System.out.println(s);
 	}
