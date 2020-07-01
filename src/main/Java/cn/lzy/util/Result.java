@@ -33,4 +33,9 @@ public class Result {
         this.data = data;
         this.count = count;
     }
+
+    public static Result ResultData(Object data){
+        return new Result(200,"OK",data,0);
+    }
+
 }
