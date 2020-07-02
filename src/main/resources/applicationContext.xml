@@ -80,6 +80,29 @@
     <tx:annotation-driven  transaction-manager="transactionManager"
                            proxy-target-class="true" />
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截所有请求 -->
+            <mvc:mapping path="/**" />
+            <bean class="cn.lzy.interceptors.UserLoginInterceptor">
+                <property name="exceptUrls">
+                    <list>
+                        <!--以下请求不做拦截                        -->
+<!--                        <value>/index</value>-->
+                        <value>Login</value>
+                        <value>login</value>
+                        <!--                        <value>/user/login</value>-->
+                        <value>Register</value>
+                        <value>register</value>
+<!--                        <value>/mailSendCode</value>-->
+                        <!--                        <value>/user/register</value>-->
+                        <!--                        <value>/loginInterceptor</value>-->
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 <!--  开启标注形式的 aop  -->
 <!--    <aop:aspectj-autoproxy proxy-target-class="true" />-->
 
