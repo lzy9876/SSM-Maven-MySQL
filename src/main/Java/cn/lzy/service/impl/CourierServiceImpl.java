@@ -9,6 +9,9 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+import java.io.Console;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +27,9 @@ public class CourierServiceImpl implements CourierService {
 
     @Autowired
     CourierDao courierDao;
+
+    @Autowired
+    RedisUtil redisUtil;
 
     @Override
     public Result queryUserByPhone(String phone) {
@@ -161,7 +167,7 @@ public class CourierServiceImpl implements CourierService {
     }
 
     @Override
-    public Result login(String phone, String password) {
+    public Result login(String phone, String password, HttpServletResponse response) {
         Result result = new Result();
         User user = courierDao.queryUserByPhone(phone);
         if(user == null ){
@@ -169,7 +175,14 @@ public class CourierServiceImpl implements CourierService {
             result.setMsg(Constant.LOGIN_ERROR1_MSG);
             return result;
         }
-
+        //根据用户登录账号 判断redis中是否存在登录信息 以防止用户二次登录
+        if(redisUtil.hasKey(user.getId()+"token")){
+            //用户已经登陆过
+            result.setCode(Constant.SUCCESS);
+            result.setMsg(Constant.SUCCESS_SUCCESS_MSG);
+            result.setData(user);
+            return result;
+        }
         //用户输入的密码
         String userPass = PasswordUtil.md5(password+user.getSalt());
         //密码比对
@@ -178,6 +191,14 @@ public class CourierServiceImpl implements CourierService {
             result.setMsg(Constant.LOGIN_ERROR2_MSG);
             return result;
         }
+        //登录成功 令牌存入 redis key=user.id+"token" value = JWTUtil.sign(user) 60*60=一小时
+        redisUtil.set(user.getId()+"token",JWTUtil.sign(user),60*60);
+        //cookie存入用户ID
+        Cookie cookie = new Cookie("userId",Integer.toString(user.getId()));
+        //cookie存在时间为一小时 (60*60*24 是一天)
+        cookie.setMaxAge(60*60);
+        cookie.setPath("/");
+        response.addCookie(cookie);
         result.setCode(Constant.SUCCESS);
         result.setMsg(Constant.LOGIN_SUCCESS_MSG);
         result.setData(user);

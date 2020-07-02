@@ -2,6 +2,7 @@ package cn.lzy.service;
 
 import cn.lzy.util.Result;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
@@ -75,7 +76,7 @@ public interface CourierService {
     * @Param [name, password]
     * @return cn.lzy.util.Result
     **/
-    Result login(String phone, String password);
+    Result login(String phone, String password, HttpServletResponse response);
 
 
     /**
