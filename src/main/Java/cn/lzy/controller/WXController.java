@@ -46,19 +46,19 @@ public class WXController {
         return "wx/index";
     }
 
-    @GetMapping("wxLogin")
+    @GetMapping("wxlogin")
     public String toWxLogin(){
         return "wx/login";
     }
 
 
-    @GetMapping("userQuitLogin")
+    @GetMapping("userQuitlogin")
     public String  adminQuit(HttpServletResponse response, HttpServletRequest request){
         DeleteCookie.delete(response,"userId");
         return "wx/login";
     }
 
-    @PostMapping("/wxLogin")
+    @PostMapping("/wxlogin")
     public @ResponseBody
     Result login(String username, String password, HttpServletResponse response){
         Result result = new Result();
@@ -68,25 +68,13 @@ public class WXController {
             result.setMsg(Constant.DATA_ERROR_MSG);
             return  result;
         }
-        result = courierService.login(username,password);
+        result = courierService.login(username,password,response);
         //账号密码错误直接return
         if(result.getCode() != Constant.SUCCESS){
             return result;
         }
         User user = (User) result.getData();
-        //判断用户角色 role=1 管理员，role=2普通用户
-        Integer userId = null;
-        if(user.getRole() == 1) {
-            userId = user.getId();
-        }else if(user.getRole() == 2){
-            userId = user.getId();
-        }
         Integer role = user.getRole();
-        //保存用户登录的信息
-        Cookie cookie = new Cookie("userId",userId.toString());//创建新cookie
-        cookie.setMaxAge(30*24*60*60);// 设置存在时间为30天
-        cookie.setPath("/");//设置作用域
-        response.addCookie(cookie);//将cookie添加到response的cookie数组中返回给客户端
         //保存用户登录的角色
         Cookie cookie1 = new Cookie("role",role.toString());//创建新cookie
         cookie1.setMaxAge(30*24*60*60);// 设置存在时间为30天
@@ -102,7 +90,7 @@ public class WXController {
      * @Param []
      * @return java.lang.String
      **/
-    @GetMapping("wxReg")
+    @GetMapping("wxreg")
     public String toWxReg(){
         return "wx/reg";
     }
