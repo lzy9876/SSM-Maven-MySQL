@@ -36,7 +36,7 @@ public class IndexController {
     @Autowired
     ExpressService expressService;
 
-    @GetMapping("toindex")
+    @GetMapping("/toindex")
     public String toIndex(){
         return "index";
     }
@@ -54,7 +54,7 @@ public class IndexController {
      * @Param []
      * @return java.lang.String
      **/
-    @GetMapping("toadminLogin")
+    @GetMapping("/toadminLogin")
     public String  toLogin(){
         return "login";
     }
@@ -67,7 +67,7 @@ public class IndexController {
      * @Param [response]
      * @return java.lang.String
      **/
-    @GetMapping("quitLogin")
+    @GetMapping("/quitLogin")
     public String  adminQuit(HttpServletResponse response, HttpServletRequest request){
         DeleteCookie.delete(response,"userId");
         return "login";
@@ -90,7 +90,7 @@ public class IndexController {
             result.setMsg(Constant.DATA_ERROR_MSG);
             return  result;
         }
-        result = courierService.login(username,password);
+        result = courierService.login(username,password,response);
         //账号密码错误直接return
         if(result.getCode() != Constant.SUCCESS){
             return result;
@@ -102,13 +102,7 @@ public class IndexController {
             result.setMsg(Constant.LOGIN_ERROR_MSG);
             return result;
         }
-        Integer userId = user.getId();
         Integer role = user.getRole();
-        //保存管理员登录的信息
-        Cookie cookie = new Cookie("userId",userId.toString());//创建新cookie
-        cookie.setMaxAge(30*24*60*60);// 设置存在时间为30天
-        cookie.setPath("/");//设置作用域
-        response.addCookie(cookie);//将cookie添加到response的cookie数组中返回给客户端
 
         Cookie cookie1 = new Cookie("role",role.toString());//创建新cookie
         cookie1.setMaxAge(30*24*60*60);// 设置存在时间为30天
@@ -125,7 +119,7 @@ public class IndexController {
      * @Param []
      * @return java.lang.String
      **/
-    @GetMapping("toRegister")
+    @GetMapping("/toRegister")
     public String  toRegister(){
         return "reg";
     }
