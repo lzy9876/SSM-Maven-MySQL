@@ -93,11 +93,11 @@
 
 			$("#btn").click(function(){
 				var time1 = new Date().getTime();
-				var index = layer.load(0,{time:10000});
+				//var index = layer.load(0,{time:10000});
 				var username = $("#username").val();
 				var password = $("#password").val();
+				if(username != null || password != null){
 				$.ajax({
-					url:"/wxLogin",
 					type:"post",
 					dataType:"json",
 					async:true,

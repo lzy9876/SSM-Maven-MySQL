@@ -35,7 +35,7 @@
 
                 <div class="custom-logo">
 
-                    <h1>快件e栈</h1>
+                    <h1>快件驿站</h1>
                 </div>
                 <ul id="Nav" class="layui-nav layui-nav-tree">
                     <li class="layui-nav-item">
@@ -98,11 +98,10 @@
         $(function() {
             var id = getCookie("userId");
             if (id == null || id == "") {
-                window.location.href = "/adminLogin";
+                window.location.href = "/toadminLogin";
             }else {
                 getUserName(id)
             }
-
         })
 
 
