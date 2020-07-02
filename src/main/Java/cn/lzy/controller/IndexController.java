@@ -54,7 +54,7 @@ public class IndexController {
      * @Param []
      * @return java.lang.String
      **/
-    @GetMapping("adminLogin")
+    @GetMapping("toadminLogin")
     public String  toLogin(){
         return "login";
     }
