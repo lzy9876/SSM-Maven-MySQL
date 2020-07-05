@@ -3,10 +3,7 @@ package cn.lzy.controller;
 import cn.lzy.entity.ConsoleData;
 import cn.lzy.service.CourierService;
 import cn.lzy.service.ExpressService;
-import cn.lzy.util.Constant;
-import cn.lzy.util.DateUtil;
-import cn.lzy.util.DeleteCookie;
-import cn.lzy.util.Result;
+import cn.lzy.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +33,9 @@ public class IndexController {
     @Autowired
     ExpressService expressService;
 
+    @Autowired
+    RedisUtil redisUtil;
+
     @GetMapping("/toindex")
     public String toIndex(){
         return "index";
@@ -62,15 +62,35 @@ public class IndexController {
 
     /**
      * @Author liziyang
-     * @Description 退出登录 userId 设置为 空
+     * @Description 退出登录 删除对应用户的redis  key
      * @Date 16:00 2019/12/26
      * @Param [response]
      * @return java.lang.String
      **/
     @GetMapping("/quitLogin")
-    public String  adminQuit(HttpServletResponse response, HttpServletRequest request){
-        DeleteCookie.delete(response,"userId");
-        return "login";
+    public @ResponseBody
+    Result adminQuit(HttpServletResponse response, HttpServletRequest request){
+        System.out.println(request);
+        boolean flag = false;
+        String userId = CookieUtil.getCookie("userId", request);
+        if(redisUtil.hasKey(userId+"token")) {
+            redisUtil.del(userId + "token");
+        }
+        if(!redisUtil.hasKey(userId+"token")) {
+            //if(false) 进入 表示未找到 删除成功 将flag = true
+            flag = true;
+        }
+        Result result = new Result();
+        //flag = true 表示删除成功
+        if(flag){
+            result.setCode(Constant.SUCCESS);
+            result.setMsg(Constant.SUCCESS_SUCCESS_MSG);
+        }else{
+            result.setCode(Constant.ERROR1);
+            result.setMsg("redis 删除失败");
+        }
+
+        return result;
     }
 
 
@@ -83,33 +103,14 @@ public class IndexController {
      **/
     @PostMapping("/adminLogin")
     public @ResponseBody
-    Result adminLogin(String username, String password, HttpServletResponse response){
+    Result adminLogin(String username, String password, HttpServletResponse response, HttpServletRequest request){
         Result result = new Result();
-        if(username == null || username == "" || username == null || username == ""){
+        if(username == null && username == "" && password == "" &&  password == ""){
             result.setCode(Constant.ERROR1);
             result.setMsg(Constant.DATA_ERROR_MSG);
             return  result;
         }
-        result = courierService.login(username,password,response);
-        //账号密码错误直接return
-        if(result.getCode() != Constant.SUCCESS){
-            return result;
-        }
-        User user = (User) result.getData();
-        //判断用户是否为管理员 role=1
-        if(user.getRole() != 1){
-            result.setCode(Constant.ERROR1);
-            result.setMsg(Constant.LOGIN_ERROR_MSG);
-            return result;
-        }
-        Integer role = user.getRole();
-
-        Cookie cookie1 = new Cookie("role",role.toString());//创建新cookie
-        cookie1.setMaxAge(30*24*60*60);// 设置存在时间为30天
-        cookie1.setPath("/");//设置作用域
-        response.addCookie(cookie1);//将cookie添加到response的cookie数组中返回给客户端
-
-        return  result;
+        return  courierService.login(username,password,response,request);
     }
 
     /**
@@ -174,5 +175,10 @@ public class IndexController {
 //        consoleData.setUserConuntRole2(userConuntRole2);
 
         return new Result(Constant.SUCCESS,Constant.SUCCESS_SUCCESS_MSG,consoleData,0);
+    }
+
+    @GetMapping("/loginInterceptor")
+    public String loginInterceptor(){
+        return "interceptor/loginInterceptor";
     }
 }

@@ -24,7 +24,7 @@
                     <a href="javascript:;"><div id="username">李伟杰</div></a>
                     <dl class="layui-nav-child">
                         <dd><a href="#">帮助中心</a></dd>
-                        <dd><a href="/quitLogin">退出</a></dd>
+                        <dd><a onclick="quitLogin()">退出</a></dd>
                     </dl>
                 </li>
             </ul>
@@ -97,7 +97,7 @@
     <script type="text/javascript">
         $(function() {
             var id = getCookie("userId");
-            if (id == null || id == "") {
+            if (id == null && id == "") {
                 window.location.href = "/toadminLogin";
             }else {
                 getUserName(id)
@@ -116,13 +116,30 @@
                 success:function(data){
                     if(data.code == 200){
                         var courier = data.data;
-                        if(courier.role != 1){
-                            window.location.href = "/quitLogin";
-                        }
                         $("#username").text(courier.name);
                     }else{
 
                         $("#username").text("姓名异常");
+                    }
+                },
+                error:function (data) {
+
+                }
+
+            })
+        }
+
+        function quitLogin() {
+            $.ajax({
+                url:"/quitLogin",
+                type:"get",
+                dataType:"json",
+                async:true,
+                success:function(data){
+                    if(data.code == 200){
+                            window.location.href = "/toadminLogin";
+                    }else{
+                        alert(data.msg)
                     }
                 },
                 error:function (data) {
